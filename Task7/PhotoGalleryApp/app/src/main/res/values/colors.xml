@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="headerBg">#1B2A5E</color>
+    <color name="headerText">#FFFFFF</color>
+    <color name="tabBarBg">#F0F3FF</color>
+    <color name="tabSelected">#1B2A5E</color>
+    <color name="tabSelectedText">#FFFFFF</color>
+    <color name="tabNormal">#FFFFFF</color>
+    <color name="tabNormalText">#1B2A5E</color>
+    <color name="tabBorder">#1B2A5E</color>
+    <color name="selectionBg">#263060</color>
+    <color name="selectionText">#FFFFFF</color>
+    <color name="gridBg">#EBEBEB</color>
+    <color name="itemTitleBg">#B3000000</color>
+    <color name="deleteBtn">#D32F2F</color>
+    <color name="shareBtn">#388E3C</color>
+</resources>
