@@ -1,0 +1,420 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingStart="16dp"
+        android:paddingEnd="8dp"
+        android:elevation="4dp"
+        android:background="?attr/colorSurface">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="The Daily Reader"
+            android:textColor="#F44336"
+            android:textSize="20sp"
+            android:textStyle="bold|italic" />
+        <ImageButton
+            android:id="@+id/btnBookmark"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src="@drawable/ic_bookmark_border"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="Bookmark"/>
+        <ImageButton
+            android:id="@+id/btnShare"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src="@drawable/ic_share"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="Share"/>
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/nestedScrollView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:scaleType="centerCrop"
+                    android:background="#BDBDBD"
+                    android:contentDescription="Article header image"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="12dp"
+                    android:background="@drawable/bg_category_tag"
+                    android:text="SCIENCE"
+                    android:textColor="@color/black"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="16dp"
+                    android:background="#00BCD4"
+                    android:text="The New Space Race: How Private Companies Are Redefining Humanity&#8217;s Journey Beyond Earth"
+                    android:textColor="@color/design_default_color_on_secondary"
+                    android:textSize="22sp"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="16dp"
+                    android:background="#00BCD4"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
+                        android:contentDescription="Author avatar"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/profile" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_weight="1"
+                        android:text="James Holloway"
+                        android:textColor="@color/design_default_color_error"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="April 15, 2026"
+                        android:textColor="@color/design_default_color_error"
+                        android:textSize="12sp" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#E0E0E0"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginTop="12dp"/>
+
+                <HorizontalScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:scrollbars="none"
+                    android:layout_marginTop="8dp">
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:paddingStart="16dp"
+                        android:paddingEnd="16dp">
+
+                        <Button
+                            android:id="@+id/btnNavIntro"
+                            style="@style/Widget.Material3.Button.OutlinedButton"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="8dp"
+                            android:text="Introduction"
+                            android:textColor="@color/black" />
+
+                        <Button
+                            android:id="@+id/btnNavKeyPoints"
+                            style="@style/Widget.Material3.Button.OutlinedButton"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="8dp"
+                            android:text="Key Points"
+                            android:textColor="@color/black" />
+
+                        <Button
+                            android:id="@+id/btnNavAnalysis"
+                            style="@style/Widget.Material3.Button.OutlinedButton"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="8dp"
+                            android:text="Analysis"
+                            android:textColor="@color/black" />
+
+                        <Button
+                            android:id="@+id/btnNavConclusion"
+                            style="@style/Widget.Material3.Button.OutlinedButton"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Conclusion"
+                            android:textColor="@color/black" />
+                    </LinearLayout>
+                </HorizontalScrollView>
+
+                <TextView
+                    android:id="@+id/sectionIntroduction"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Introduction"
+                    android:textColor="#1A3A5C"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginTop="16dp"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="The dawn of commercial spaceflight has ushered in an era unlike anything humanity has witnessed since the Apollo missions. Private aerospace companies are no longer simply contractors for national agencies; they are pioneering wholly new markets, technologies, and ambitions that extend far beyond low-Earth orbit. From reusable rocket systems that have slashed launch costs by over ninety percent to ambitious plans for permanent lunar bases and eventual Mars colonisation, the landscape of space exploration has been irrevocably transformed. Governments across the world are recalibrating their space strategies in response, forging unprecedented public-private partnerships that blend institutional expertise with entrepreneurial agility. This article examines the forces driving the new space race, the technologies enabling it, and the profound questions it raises about sovereignty, sustainability, and what it means for humanity to become a multi-planetary species."
+                    android:textColor="#2E4057"
+                    android:textSize="13sp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginTop="8dp"/>
+
+                <TextView
+                    android:id="@+id/sectionKeyPoints"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Key Points"
+                    android:textColor="#1A3A5C"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginTop="16dp"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Several defining trends are shaping the current era of space exploration. First, reusable launch vehicles have reduced the cost per kilogram to orbit from over ten thousand dollars in the 1980s to under two thousand dollars today, opening the floodgates for commercial satellite deployment. Second, mega-constellations of small satellites are democratising access to high-speed internet across rural and underserved regions worldwide. Third, NASA&#8217;s Artemis programme, supported by a coalition of international partners and private contractors, aims to return humans to the lunar surface and establish a sustainable presence by the end of this decade. Fourth, Mars has shifted from a distant dream to a near-term engineering challenge, with multiple nations and corporations actively developing mission architectures. Fifth, in-space manufacturing and resource extraction from asteroids and the Moon represent trillion-dollar economic opportunities that are beginning to attract serious investment. Sixth, the militarisation of space is accelerating, prompting urgent calls for updated international treaties to prevent conflict in orbit."
+                    android:textColor="#2E4057"
+                    android:textSize="13sp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginTop="8dp"/>
+
+                <TextView
+                    android:id="@+id/sectionAnalysis"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Analysis"
+                    android:textColor="#1A3A5C"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginTop="16dp"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="A closer look at the economics and geopolitics of the new space race reveals dynamics that are both exhilarating and sobering. The falling cost of access to space has attracted over three hundred active launch and satellite companies worldwide, yet consolidation is inevitable as the market matures. National programmes remain critical anchor customers, providing the long-term contracts that allow private firms to invest in next-generation technology. China&#8217;s rapidly expanding civil and military space programme has added competitive urgency that echoes the Cold War rivalry between the United States and the Soviet Union, but today&#8217;s contest involves many more actors across Europe, India, Japan, and the Gulf states. Environmental concerns are also emerging as a serious consideration: rocket exhaust deposits black carbon directly into the stratosphere, and the proliferation of satellites is increasing the risk of Kessler Syndrome, a cascade of orbital debris that could render key orbital shells unusable for generations. Balancing the extraordinary promise of the space economy with responsible stewardship of the orbital environment is perhaps the defining regulatory challenge of this decade."
+                    android:textColor="#2E4057"
+                    android:textSize="13sp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginTop="8dp"/>
+
+                <TextView
+                    android:id="@+id/sectionConclusion"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Conclusion"
+                    android:textColor="#1A3A5C"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginTop="16dp"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Humanity stands at the threshold of becoming a truly spacefaring civilisation, and the decisions made in the next decade will determine whether that future is open and equitable or narrow and conflict-ridden. The convergence of falling launch costs, maturing in-space technologies, and renewed national ambitions creates a window of opportunity that previous generations could only dream about. Yet realising the full potential of space requires more than engineering brilliance; it demands new frameworks of international cooperation, environmental responsibility, and inclusive economic models that ensure the benefits of the space economy are shared broadly. History suggests that the boldest explorations succeed when driven by a combination of competition and collaboration. The cosmos is vast enough for many nations and many visions. By investing in transparent governance, sustainable practices, and education that inspires the next generation of scientists and engineers, humanity can ensure that our journey beyond Earth enriches life on it."
+                    android:textColor="#2E4057"
+                    android:textSize="13sp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginTop="8dp"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginTop="16dp">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Tags:"
+                        android:textStyle="bold"
+                        android:textSize="14sp"
+                        android:layout_marginEnd="8dp"/>
+                    <HorizontalScrollView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:scrollbars="none">
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+                            <Button
+                                style="@style/Widget.Material3.Button.OutlinedButton"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Space"
+                                android:layout_marginEnd="4dp"/>
+                            <Button
+                                style="@style/Widget.Material3.Button.OutlinedButton"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Exploration"
+                                android:layout_marginEnd="4dp"/>
+                            <Button
+                                style="@style/Widget.Material3.Button.OutlinedButton"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Rockets"
+                                android:layout_marginEnd="4dp"/>
+                            <Button
+                                style="@style/Widget.Material3.Button.OutlinedButton"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Mars"
+                                android:layout_marginEnd="4dp"/>
+                            <Button
+                                style="@style/Widget.Material3.Button.OutlinedButton"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Satellites"/>
+                        </LinearLayout>
+                    </HorizontalScrollView>
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Related Articles"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginTop="16dp"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:background="@drawable/bg_related_card"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginTop="8dp"
+                    android:padding="8dp">
+                    <ImageView
+                        android:layout_width="80dp"
+                        android:layout_height="60dp"
+                        android:scaleType="centerCrop"
+                        android:background="#BDBDBD"
+                        android:contentDescription="Article thumbnail"/>
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Reusable Rockets: How SpaceX Changed the Economics of Space Forever"
+                        android:textColor="#2E4057"
+                        android:textSize="14sp"
+                        android:layout_marginStart="8dp"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:background="@drawable/bg_related_card"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginTop="8dp"
+                    android:padding="8dp">
+                    <ImageView
+                        android:layout_width="80dp"
+                        android:layout_height="60dp"
+                        android:scaleType="centerCrop"
+                        android:background="#BDBDBD"
+                        android:contentDescription="Article thumbnail"/>
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Artemis and Beyond: Building a Permanent Human Presence on the Moon"
+                        android:textColor="#2E4057"
+                        android:textSize="14sp"
+                        android:layout_marginStart="8dp"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:background="@drawable/bg_related_card"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="16dp"
+                    android:padding="8dp">
+                    <ImageView
+                        android:layout_width="80dp"
+                        android:layout_height="60dp"
+                        android:scaleType="centerCrop"
+                        android:background="#BDBDBD"
+                        android:contentDescription="Article thumbnail"/>
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="The Kessler Syndrome: Why Space Debris Could Lock Us Out of Orbit"
+                        android:textColor="#2E4057"
+                        android:textSize="14sp"
+                        android:layout_marginStart="8dp"/>
+                </LinearLayout>
+
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+
+        <Button
+            android:id="@+id/btnBackToTop"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="↑ Top"
+            android:layout_gravity="bottom|end"
+            android:layout_margin="16dp"/>
+
+    </FrameLayout>
+
+</LinearLayout>
