@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rootLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    android:background="#F3F4F8">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/navBarBg"
+        android:orientation="horizontal"
+        android:paddingStart="6dp"
+        android:paddingEnd="6dp"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp"
+        android:gravity="center_vertical">
+
+        <Button
+            android:id="@+id/btnNavBack"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:layout_marginEnd="3dp"
+            android:text="◀"
+            android:textColor="@color/navBarText"
+            android:textSize="18sp"
+            android:backgroundTint="#2E3F9E"
+            android:padding="0dp" />
+
+        <Button
+            android:id="@+id/btnNavForward"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:layout_marginEnd="3dp"
+            android:text="▶"
+            android:textColor="@color/navBarText"
+            android:textSize="18sp"
+            android:backgroundTint="#2E3F9E"
+            android:padding="0dp" />
+
+        <Button
+            android:id="@+id/btnNavRefresh"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:layout_marginEnd="3dp"
+            android:text="🔄"
+            android:textColor="@color/navBarText"
+            android:textSize="18sp"
+            android:backgroundTint="#2E3F9E"
+            android:padding="0dp" />
+
+        <Button
+            android:id="@+id/btnNavHome"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:text="🏠"
+            android:textColor="@color/navBarText"
+            android:textSize="18sp"
+            android:backgroundTint="#2E3F9E"
+            android:padding="0dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/addressBarBg"
+        android:orientation="horizontal"
+        android:paddingStart="8dp"
+        android:paddingEnd="8dp"
+        android:paddingTop="6dp"
+        android:paddingBottom="6dp"
+        android:gravity="center_vertical">
+
+        <EditText
+            android:id="@+id/etAddressBar"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:layout_marginEnd="6dp"
+            android:hint="Type a web address..."
+            android:imeOptions="actionDone"
+            android:inputType="textUri"
+            android:singleLine="true"
+            android:textSize="13sp"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:background="#FFFFFF"
+            android:textColor="#1A237E" />
+
+        <Button
+            android:id="@+id/btnGo"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:text="GO"
+            android:textColor="#FFFFFF"
+            android:textSize="13sp"
+            android:backgroundTint="@color/goBtnBg"
+            android:paddingStart="14dp"
+            android:paddingEnd="14dp" />
+
+    </LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/loadingBar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:max="100"
+        android:progressTint="@color/progressColor"
+        android:visibility="gone" />
+
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/shortcutBg"
+        android:paddingStart="6dp"
+        android:paddingEnd="6dp"
+        android:paddingTop="4dp"
+        android:paddingBottom="4dp"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <Button
+                android:id="@+id/btnShortcutGoogle"
+                android:layout_width="wrap_content"
+                android:layout_height="36dp"
+                android:layout_marginEnd="4dp"
+                android:text="Google"
+                android:textSize="12sp"
+                android:textColor="#1A237E"
+                android:backgroundTint="#FFFFFF"
+                android:paddingStart="12dp"
+                android:paddingEnd="12dp" />
+
+            <Button
+                android:id="@+id/btnShortcutYouTube"
+                android:layout_width="wrap_content"
+                android:layout_height="36dp"
+                android:layout_marginEnd="4dp"
+                android:text="YouTube"
+                android:textSize="12sp"
+                android:textColor="#1A237E"
+                android:backgroundTint="#FFFFFF"
+                android:paddingStart="12dp"
+                android:paddingEnd="12dp" />
+
+            <Button
+                android:id="@+id/btnShortcutWikipedia"
+                android:layout_width="wrap_content"
+                android:layout_height="36dp"
+                android:layout_marginEnd="4dp"
+                android:text="Wikipedia"
+                android:textSize="12sp"
+                android:textColor="#1A237E"
+                android:backgroundTint="#FFFFFF"
+                android:paddingStart="12dp"
+                android:paddingEnd="12dp" />
+
+            <Button
+                android:id="@+id/btnShortcutKhanAcademy"
+                android:layout_width="wrap_content"
+                android:layout_height="36dp"
+                android:layout_marginEnd="4dp"
+                android:text="Khan Academy"
+                android:textSize="12sp"
+                android:textColor="#1A237E"
+                android:backgroundTint="#FFFFFF"
+                android:paddingStart="12dp"
+                android:paddingEnd="12dp" />
+
+            <Button
+                android:id="@+id/btnShortcutUniversity"
+                android:layout_width="wrap_content"
+                android:layout_height="36dp"
+                android:text="University"
+                android:textSize="12sp"
+                android:textColor="#1A237E"
+                android:backgroundTint="#FFFFFF"
+                android:paddingStart="12dp"
+                android:paddingEnd="12dp" />
+
+        </LinearLayout>
+
+    </HorizontalScrollView>
+
+    <WebView
+        android:id="@+id/portalWebView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+</LinearLayout>
