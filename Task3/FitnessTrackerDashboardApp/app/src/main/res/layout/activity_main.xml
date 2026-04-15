@@ -9,7 +9,7 @@
     android:background="@color/colorBackground"
     tools:context=".MainActivity">
 
-    <!-- Vertical Guideline at 50% — splits screen into two equal columns for stats grid -->
+    <!-- Vertical Guideline at 50% — divides screen into two equal columns -->
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guidelineVertical"
         android:layout_width="wrap_content"
@@ -17,17 +17,21 @@
         android:orientation="vertical"
         app:layout_constraintGuide_percent="0.5" />
 
-    <!-- ─── Header Section ─── -->
+    <!-- ═══════════════════════════════════════════
+         HEADER SECTION
+         ═══════════════════════════════════════════ -->
 
     <TextView
         android:id="@+id/tvTitle"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="16dp"
         android:gravity="center"
         android:text="My Fitness Dashboard"
         android:textColor="@color/design_default_color_error"
-        android:textSize="22sp"
+        android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@id/tvDate"
         app:layout_constraintEnd_toEndOf="parent"
@@ -39,32 +43,35 @@
         android:id="@+id/tvDate"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
         android:layout_marginTop="4dp"
+        android:layout_marginEnd="16dp"
         android:gravity="center"
-        android:textColor="@color/design_default_color_on_secondary"
-        android:textSize="14sp"
+        android:textColor="@color/colorWorkoutText"
+        android:textSize="13sp"
         app:layout_constraintBottom_toTopOf="@id/cardSteps"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/tvTitle"
-        tools:text="Monday, April 14, 2026" />
+        tools:text="Tuesday, April 15, 2026" />
 
-    <!-- ─── Stats Grid Row 1 (horizontal chain: Steps + Calories) ─── -->
+    <!-- ═══════════════════════════════════════════
+         STATS GRID — ROW 1: Steps | Calories
+         Cards constrain to the vertical guideline
+         ═══════════════════════════════════════════ -->
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cardSteps"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginStart="12dp"
-        android:layout_marginTop="12dp"
+        android:layout_marginTop="14dp"
         android:layout_marginEnd="6dp"
         app:cardBackgroundColor="@color/colorStepsCard"
-        app:cardCornerRadius="12dp"
+        app:cardCornerRadius="14dp"
         app:cardElevation="4dp"
         app:layout_constraintDimensionRatio="H,1:1"
-        app:layout_constraintEnd_toStartOf="@id/cardCalories"
-        app:layout_constraintHorizontal_chainStyle="spread"
-        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintEnd_toStartOf="@id/guidelineVertical"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/tvDate">
 
@@ -73,28 +80,30 @@
             android:layout_height="match_parent"
             android:gravity="center"
             android:orientation="vertical"
-            android:padding="8dp">
+            android:padding="10dp">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="🚶"
-                android:textSize="28sp" />
+                android:textSize="30sp" />
 
             <TextView
                 android:id="@+id/tvStepsCount"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
                 android:text="0"
-                android:textColor="@color/design_default_color_error"
-                android:textSize="22sp"
+                android:textColor="@color/colorStepsText"
+                android:textSize="24sp"
                 android:textStyle="bold" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
                 android:text="Steps"
-                android:textColor="@color/design_default_color_error"
+                android:textColor="@color/colorStepsText"
                 android:textSize="12sp" />
         </LinearLayout>
     </androidx.cardview.widget.CardView>
@@ -104,15 +113,14 @@
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginStart="6dp"
-        android:layout_marginTop="12dp"
+        android:layout_marginTop="14dp"
         android:layout_marginEnd="12dp"
         app:cardBackgroundColor="@color/colorCaloriesCard"
-        app:cardCornerRadius="12dp"
+        app:cardCornerRadius="14dp"
         app:cardElevation="4dp"
         app:layout_constraintDimensionRatio="H,1:1"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_weight="1"
-        app:layout_constraintStart_toEndOf="@id/cardSteps"
+        app:layout_constraintStart_toEndOf="@id/guidelineVertical"
         app:layout_constraintTop_toBottomOf="@id/tvDate">
 
         <LinearLayout
@@ -120,48 +128,51 @@
             android:layout_height="match_parent"
             android:gravity="center"
             android:orientation="vertical"
-            android:padding="8dp">
+            android:padding="10dp">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="🔥"
-                android:textSize="28sp" />
+                android:textSize="30sp" />
 
             <TextView
                 android:id="@+id/tvCaloriesCount"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
                 android:text="0"
-                android:textColor="@color/design_default_color_error"
-                android:textSize="22sp"
+                android:textColor="@color/colorCaloriesText"
+                android:textSize="24sp"
                 android:textStyle="bold" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
                 android:text="Calories"
-                android:textColor="@color/design_default_color_error"
+                android:textColor="@color/colorCaloriesText"
                 android:textSize="12sp" />
         </LinearLayout>
     </androidx.cardview.widget.CardView>
 
-    <!-- ─── Stats Grid Row 2 (horizontal chain: Water + Workout) ─── -->
+    <!-- ═══════════════════════════════════════════
+         STATS GRID — ROW 2: Water | Workout Time
+         Cards constrain to the vertical guideline
+         ═══════════════════════════════════════════ -->
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cardWater"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginStart="12dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="10dp"
         android:layout_marginEnd="6dp"
         app:cardBackgroundColor="@color/colorWaterCard"
-        app:cardCornerRadius="12dp"
+        app:cardCornerRadius="14dp"
         app:cardElevation="4dp"
         app:layout_constraintDimensionRatio="H,1:1"
-        app:layout_constraintEnd_toStartOf="@id/cardWorkout"
-        app:layout_constraintHorizontal_chainStyle="spread"
-        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintEnd_toStartOf="@id/guidelineVertical"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/cardSteps">
 
@@ -170,28 +181,30 @@
             android:layout_height="match_parent"
             android:gravity="center"
             android:orientation="vertical"
-            android:padding="8dp">
+            android:padding="10dp">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="💧"
-                android:textSize="28sp" />
+                android:textSize="30sp" />
 
             <TextView
                 android:id="@+id/tvWaterCount"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
                 android:text="0"
-                android:textColor="@color/design_default_color_error"
-                android:textSize="22sp"
+                android:textColor="@color/colorWaterText"
+                android:textSize="24sp"
                 android:textStyle="bold" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
                 android:text="Water (L)"
-                android:textColor="@color/design_default_color_error"
+                android:textColor="@color/colorWaterText"
                 android:textSize="12sp" />
         </LinearLayout>
     </androidx.cardview.widget.CardView>
@@ -201,15 +214,14 @@
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginStart="6dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="10dp"
         android:layout_marginEnd="12dp"
         app:cardBackgroundColor="@color/colorWorkoutCard"
-        app:cardCornerRadius="12dp"
+        app:cardCornerRadius="14dp"
         app:cardElevation="4dp"
         app:layout_constraintDimensionRatio="H,1:1"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_weight="1"
-        app:layout_constraintStart_toEndOf="@id/cardWater"
+        app:layout_constraintStart_toEndOf="@id/guidelineVertical"
         app:layout_constraintTop_toBottomOf="@id/cardCalories">
 
         <LinearLayout
@@ -217,33 +229,35 @@
             android:layout_height="match_parent"
             android:gravity="center"
             android:orientation="vertical"
-            android:padding="8dp">
+            android:padding="10dp">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="⏱️"
-                android:textSize="28sp" />
+                android:textSize="30sp" />
 
             <TextView
                 android:id="@+id/tvWorkoutCount"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
                 android:text="0"
-                android:textColor="@color/design_default_color_error"
-                android:textSize="22sp"
+                android:textColor="@color/colorWorkoutText"
+                android:textSize="24sp"
                 android:textStyle="bold" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Workout Time (min)"
-                android:textColor="@color/design_default_color_error"
+                android:layout_marginTop="2dp"
+                android:text="Workout (min)"
+                android:textColor="@color/colorWorkoutText"
                 android:textSize="12sp" />
         </LinearLayout>
     </androidx.cardview.widget.CardView>
 
-    <!-- Barrier at the bottom of the stats grid (dynamic card heights) -->
+    <!-- Barrier below both bottom-row cards — anchors progress section dynamically -->
     <androidx.constraintlayout.widget.Barrier
         android:id="@+id/barrierStatsBottom"
         android:layout_width="wrap_content"
@@ -251,34 +265,37 @@
         app:barrierDirection="bottom"
         app:constraint_referenced_ids="cardWater,cardWorkout" />
 
-    <!-- ─── Progress Section ─── -->
+    <!-- ═══════════════════════════════════════════
+         PROGRESS SECTION
+         Chain: ProgressBar (weight=1) | Percent TextView
+         ═══════════════════════════════════════════ -->
 
     <TextView
         android:id="@+id/tvGoalProgress"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="18dp"
         android:layout_marginEnd="16dp"
         android:text="Today's Goal Progress"
-        android:textColor="@color/design_default_color_error"
-        android:textSize="16sp"
+        android:textColor="@color/design_default_color_primary"
+        android:textSize="15sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/barrierStatsBottom" />
 
-    <!-- Horizontal chain: ProgressBar + Percentage TextView -->
     <ProgressBar
         android:id="@+id/progressBar"
         style="?android:attr/progressBarStyleHorizontal"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="4dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="6dp"
         android:max="100"
         android:progress="0"
+        android:progressBackgroundTint="@color/colorProgressBg"
         android:progressTint="@color/design_default_color_error"
         app:layout_constraintEnd_toStartOf="@id/tvProgressPercent"
         app:layout_constraintHorizontal_chainStyle="spread_inside"
@@ -286,51 +303,55 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/tvGoalProgress" />
 
+    <!-- ═══════════════════════════════════════════
+         MOTIVATIONAL QUOTE — constrained above button
+         ═══════════════════════════════════════════ -->
+
     <TextView
         android:id="@+id/tvProgressPercent"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="16dp"
         android:gravity="center"
-        android:minWidth="44dp"
+        android:minWidth="46dp"
         android:text="0%"
         android:textColor="@color/design_default_color_error"
         android:textSize="14sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@id/progressBar"
-        app:layout_constraintTop_toBottomOf="@id/tvGoalProgress" />
-
-    <!-- ─── Motivational Quote — constrained above button ─── -->
+        tools:layout_editor_absoluteY="529dp" />
 
     <TextView
         android:id="@+id/tvMotivationalQuote"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:layout_marginEnd="24dp"
-        android:layout_marginBottom="16dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginEnd="28dp"
+        android:layout_marginBottom="14dp"
         android:gravity="center"
         android:text="&quot;A journey of a thousand miles begins with a single step!&quot;"
-        android:textColor="@color/design_default_color_error"
-        android:textSize="14sp"
+        android:textColor="@color/colorWorkoutText"
+        android:textSize="13sp"
         android:textStyle="italic"
         app:layout_constraintBottom_toTopOf="@id/btnUpdateStats"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
-    <!-- ─── Update Stats Button — constrained to bottom center ─── -->
+    <!-- ═══════════════════════════════════════════
+         UPDATE STATS BUTTON — constrained to bottom center
+         ═══════════════════════════════════════════ -->
 
     <Button
         android:id="@+id/btnUpdateStats"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="28dp"
-        android:backgroundTint="@color/design_default_color_error"
-        android:paddingStart="32dp"
-        android:paddingEnd="32dp"
+        android:layout_marginBottom="30dp"
+        android:backgroundTint="@android:color/holo_orange_dark"
+        android:paddingStart="36dp"
+        android:paddingEnd="36dp"
         android:text="Update Stats"
-        android:textColor="@color/white"
+        android:textColor="@color/black"
         android:textSize="15sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

@@ -5,9 +5,18 @@
     <color name="colorBackground">#F0F4F8</color>
     <color name="colorPrimary">#1A237E</color>
     <color name="colorSecondary">#5C6BC0</color>
+    <color name="colorAccent">#3F51B5</color>
+    <color name="colorSubText">#546E7A</color>
     <color name="colorStepsCard">#E8EAF6</color>
     <color name="colorCaloriesCard">#FFF3E0</color>
     <color name="colorWaterCard">#E0F7FA</color>
     <color name="colorWorkoutCard">#E8F5E9</color>
+    <color name="colorStepsText">#283593</color>
+    <color name="colorCaloriesText">#E65100</color>
+    <color name="colorWaterText">#006064</color>
+    <color name="colorWorkoutText">#1B5E20</color>
     <color name="colorProgressBar">#3F51B5</color>
+    <color name="colorProgressBg">#C5CAE9</color>
+    <color name="colorButtonBg">#3F51B5</color>
+    <color name="colorQuoteText">#455A64</color>
 </resources>
