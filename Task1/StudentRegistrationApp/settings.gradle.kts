@@ -22,6 +22,6 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "Student_Registration_Form"
+rootProject.name = "StudentRegistrationApp"
 include(":app")
  
