@@ -55,7 +55,7 @@ class MainActivity : AppCompatActivity() {
         }
 
         if (username != validUsername || password != validPassword) {
-            Toast.makeText(this, "Invalid credentials. Try admin / 1234", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, "Invalid credentials.", Toast.LENGTH_SHORT).show()
             return
         }
 

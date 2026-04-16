@@ -32,8 +32,8 @@ class MainActivity : AppCompatActivity() {
         val spinnerCountry = findViewById<Spinner>(R.id.spinnerCountry)
 
         val checkBoxFootball = findViewById<CheckBox>(R.id.checkBoxFootball)
-        val checkBoxCricket = findViewById<CheckBox>(R.id.checkBoxCricket)
-        val checkBoXBasketball = findViewById<CheckBox>(R.id.checkBoXBasketball)
+        val checkBoxCricket = findViewById<CheckBox>(R.id.checkBoxBasketball)
+        val checkBoXBasketball = findViewById<CheckBox>(R.id.checkBoxBasketball)
         val checkBoxBadminton = findViewById<CheckBox>(R.id.checkBoxBadminton)
 
 

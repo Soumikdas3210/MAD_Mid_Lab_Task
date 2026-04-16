@@ -3,9 +3,9 @@
 
     <string-array name="spinner_countries">
         <item>Bangladesh</item>
+        <item>Pakistan</item>
         <item>India</item>
         <item>USA</item>
         <item>UK</item>
-        <item>Canada</item>
     </string-array>
 </resources>

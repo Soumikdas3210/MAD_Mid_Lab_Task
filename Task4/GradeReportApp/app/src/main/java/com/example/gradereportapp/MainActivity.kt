@@ -181,16 +181,16 @@ class MainActivity : AppCompatActivity() {
             return
         }
         val sb = StringBuilder()
-        sb.appendLine("================================")
+        sb.appendLine("********************************")
         sb.appendLine("     STUDENT GRADE REPORT")
-        sb.appendLine("================================")
-        sb.appendLine("Name       : Rezwoan Faisal")
-        sb.appendLine("Student ID : 23-51712-2")
-        sb.appendLine("Semester   : Spring 2025-26")
+        sb.appendLine("********************************")
+        sb.appendLine("Name       : Soumik Das Dipom")
+        sb.appendLine("Student ID : 23-51709-2")
+        sb.appendLine("Semester   : Fall 2025-26")
         sb.appendLine("Department : CSE")
-        sb.appendLine("--------------------------------")
+        sb.appendLine("********************************")
         sb.appendLine(String.format(Locale.US, "%-22s %8s %6s %6s", "Subject", "Obtained", "Total", "Grade"))
-        sb.appendLine("--------------------------------")
+        sb.appendLine("********************************")
         var passed = 0
         var gpaSum = 0.0
         subjects.forEach { entry ->
@@ -201,13 +201,13 @@ class MainActivity : AppCompatActivity() {
         }
         val total = subjects.size
         val gpa = if (total > 0) gpaSum / total else 0.0
-        sb.appendLine("--------------------------------")
+        sb.appendLine("********************************")
         sb.appendLine("Total: $total  |  Passed: $passed  |  Failed: ${total - passed}")
         sb.appendLine(String.format(Locale.US, "GPA  : %.2f / 4.00", gpa))
-        sb.appendLine("================================")
+        sb.appendLine("********************************")
         val intent = Intent(Intent.ACTION_SEND).apply {
             type = "text/plain"
-            putExtra(Intent.EXTRA_SUBJECT, "Grade Report - Rezwoan Faisal")
+            putExtra(Intent.EXTRA_SUBJECT, "Grade Report - Soumik Das Dipon")
             putExtra(Intent.EXTRA_TEXT, sb.toString())
         }
         startActivity(Intent.createChooser(intent, "Share Grade Report via"))
